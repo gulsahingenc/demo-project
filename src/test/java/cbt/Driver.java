@@ -50,10 +50,10 @@ public class Driver {
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-                    ChromeOptions chromeOptions = new ChromeOptions();
-                    chromeOptions.setCapability("platform", Platform.ANY);
-                    chromeOptions.setHeadless(true);
-                    driver = new ChromeDriver(chromeOptions);
+//                     ChromeOptions chromeOptions = new ChromeOptions();
+//                     chromeOptions.setCapability("platform", Platform.ANY);
+//                     chromeOptions.setHeadless(true);
+                    driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
