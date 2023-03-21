@@ -1,6 +1,7 @@
 package cbt;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -50,9 +51,9 @@ public class Driver {
                     break;
                 case "chrome-headless":
                     WebDriverManager.chromedriver().setup();
-//                     ChromeOptions chromeOptions = new ChromeOptions();
-//                     chromeOptions.setCapability("platform", Platform.ANY);
-//                     chromeOptions.setHeadless(true);
+                     ChromeOptions chromeOptions = new ChromeOptions();
+                     chromeOptions.setCapability("platform", Platform.ANY);
+                     chromeOptions.setHeadless(true);
                     driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
                     break;
                 case "firefox":
